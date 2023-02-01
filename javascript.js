@@ -1,12 +1,10 @@
 let playerSelection;
 let computerSelection;
-let userScore = 0;
+let playerScore = 0;
 let computerScore = 0;
 let draw = 0;
 let getPlayerChoice = ''
-
-const result = document.querySelector('result')
-
+let rounds = 1;
 
 function getComputerChoice() {
     let array = ['rock', 'paper', 'scissors']
@@ -14,87 +12,84 @@ function getComputerChoice() {
     return randomElement;
 }
 
-//this function prompts the user to choose between rock, paper or scissors.
-
-// function getPlayerChoice(){
-//     const playerChoice = prompt('Choose between rock paper scissors');
-//     return playerChoice;
-// }
-
-//this function plays a single round of rock, paper, scissors using if else loop. And it also declares the winner at the end.
 
 function playRound(playerSelection, computerSelection) {
-
-    playerSelection = getPlayerChoice.toLowerCase();
-    console.log(playerSelection); 
+    playerSelection = getPlayerChoice;
+    document.getElementById("player-selection").innerHTML = 'Player: ' + playerSelection;
 
     computerSelection = getComputerChoice().toLowerCase();
-    console.log(computerSelection);
+    document.getElementById("computer-selection").innerHTML = 'Computer: ' + computerSelection;
+    
+    document.getElementById("number-of-rounds").innerHTML = 'Number of rounds: ' + rounds;
 
     if(playerSelection === computerSelection){
         draw +=1;
+        document.getElementById("draw").innerHTML = 'Draw: ' + draw;
         return 'Draw!';
     }else if (playerSelection === 'paper' && computerSelection === 'rock'){
-        userScore += 1;
+        playerScore += 1;
+        document.getElementById("player-score").innerHTML = 'Player score: ' + playerScore;
         return 'You won! Paper beats Rock';
     }else if (playerSelection === 'rock' && computerSelection === 'paper'){
         computerScore += 1;
+        document.getElementById("computer-score").innerHTML = 'Computer score: ' + computerScore;
         return 'You Lose! Paper beats Rock';
     }else if (playerSelection === 'scissors' && computerSelection === 'rock'){
         computerScore += 1;
+        document.getElementById("computer-score").innerHTML = 'Computer score: ' + computerScore;
         return 'You lose! Rock beats Rock'
     }else if (playerSelection === 'rock' && computerSelection === 'scissors'){
-        userScore += 1;
+        playerScore += 1;
+        document.getElementById("player-score").innerHTML = 'Player score: ' + playerScore;
         return 'You won! Rock beats Scissors'
     }else if (playerSelection === 'paper' && computerSelection === 'scissors'){
         computerScore += 1;
+        document.getElementById("computer-score").innerHTML = 'Computer score: ' + computerScore;
         return 'You lose Scissors beats Paper'
     }else if (playerSelection === 'scissors' && computerSelection === 'paper'){
-        userScore += 1;
+        playerScore += 1;
+        document.getElementById("player-score").innerHTML = 'Player score: ' + playerScore;
         return 'You won! Scissors beats Paper'
     }
+
  }
  
 //  This function calls the playRound function inside of this to play 5 rounds and reports the winner at the end.
 
-// function game() {
-//     for (let i = 0; i < 5; i++) {
-//         console.log(playRound(playerSelection, computerSelection));
-//     }
-//     console.log('Player Score: ' + userScore);
-//     console.log('Computer Score: ' + computerScore);
-//     console.log('Draw:' + draw);
+function game() {
+    if(playerScore < 5 && computerScore < 5){
+        playRound();
+    }
+}
 
-//     if(userScore > computerScore){
-//         return('congratulations! You won').toUpperCase()
-//     }else{
-//         return 'better luck next time'.toUpperCase();
-//     }
-// }
-
-// console.log(game());
-
-
-// console.log(playRound(playerSelection, computerSelection));
 
 
 let rock = document.querySelector('#rock');
+let paper = document.querySelector('#paper');
+let scissors = document.querySelector('#scissors');
+let finalResult = document.querySelector("final-result")
+
+
 rock.addEventListener('click', () => {
     getPlayerChoice = 'rock'
-    console.log(playRound())
     
+    game()
+    rounds += 1;
 });
 
-let paper = document.querySelector('#paper');
+
 paper.addEventListener('click', () => {
     getPlayerChoice = 'paper'
-    console.log(playRound())
+    game()
+    rounds += 1;
 });
 
-let scissors = document.querySelector('#scissors');
+
 scissors.addEventListener('click', () => {
     getPlayerChoice = 'scissors'
-    console.log(playRound())
+    game()
+    rounds += 1;
 });
+
 
 
