@@ -22,7 +22,7 @@ function playRound(playerSelection, computerSelection) {
             computerSelection = getComputerChoice().toLowerCase();
             document.getElementById("computer-selection").innerHTML = 'Computer: ' + computerSelection;
             
-            document.getElementById("number-of-rounds").innerHTML = 'Number of rounds: ' + rounds;
+            document.getElementById("number-of-rounds").innerHTML = 'Round: ' + rounds;
 
             if(playerSelection === computerSelection){
                 draw +=1;
@@ -63,9 +63,9 @@ function game() {
     }
     if(playerScore === 5 || computerScore === 5){
         if(playerScore > computerScore){
-            document.getElementById("final-result").innerHTML = ('congratulations! You won').toUpperCase()
+            document.getElementById("result").innerHTML = ('congratulations! You won').toUpperCase()
         }else{
-            document.getElementById("final-result").innerHTML = 'better luck next time'.toUpperCase();
+            document.getElementById("result").innerHTML = 'better luck next time'.toUpperCase();
         }
     }
 }

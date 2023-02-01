@@ -1,0 +1,110 @@
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    margin: 0;
+  }
+body {
+    font-family: 'Poppins';
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+li {
+    list-style: none;
+}
+.flex {
+    display: flex;
+}
+img {
+    height: 200px;
+    font-weight: auto;
+}
+
+.header {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CCD7C5;
+    padding: 20px 50px;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.links {
+    gap: 10px;
+    font-size: 20px;
+}
+
+.container {
+    padding: 2em 50px;
+}
+
+.round {
+
+    font-size: 30px;
+}
+
+.heading {
+    justify-content: center;
+    font-style: italic;
+    font-size: 60px;
+}
+
+.choices{
+    justify-content: center;
+    gap: 30px;
+    padding-top: 2em;
+    text-align: center;
+}
+
+.choice {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 30PX;
+    cursor: pointer;
+}
+
+.gap {
+    justify-content: space-around;
+    text-align: end;
+    padding: 2em;
+}
+
+.fixed-width{
+    padding: 3em 0;
+    font-size: 30px;
+    width: 150px;
+    text-align: center;
+
+}
+
+#result-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#result {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 70px;
+    height: 100px;
+
+}
+
+.score {
+    justify-content: space-around;
+    height: 250px;
+    padding-top: 3em;
+    font-size: 30px;
+}
+
+#player-score, #computer-score, #draw {
+    width: 300px;
+}

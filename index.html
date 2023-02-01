@@ -4,29 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Rock Paper Scissors</title>
     <script src="./javascript.js" defer></script>
   </head>
   <body>
-    <h3>Choose</h3>
-    <div>
-      <button id="rock">Rock</button>
-      <button id="paper">Paper</button>
-      <button id="scissors">Scissors</button>
-    </div>
-    
-    <div id="result-container">
-      <p id="player-selection">Player</p>
-      <p id="computer-selection">Computer</p>
-      <p id="result">Result</p>
-      <br>
-      <p id="player-score">Player score</p>
-      <p id="computer-score">Computer score</p>
-      <p id="draw">Draw</p>
-      <br>
-      <p id="number-of-rounds">Number of rounds</p>
-      <br>
-      <p id="final-result"></p>
-    </div>
+    <header class="header flex">
+      <div><h3>ROCK PAPER AND SCISSORS GAME</h3></div>
+      <div>
+        <ul class="links flex">
+          <li><a href="#">GITHUB</a></li>
+          <li><a href="#">LINKEDIN</a></li>
+        </ul>
+      </div>
+    </header>
+    <section class="container">
+      <p class="round" id="number-of-rounds">Round:</p>
+
+      <h3 class="heading flex">Choose</h3>
+
+      <div class="gap flex">
+        <div class="fixed-width">
+          <p id="player-selection"> Player</p>
+        </div>
+
+        <div class="choices flex">
+          <div class="choice flex" id="rock">
+            <img src="./images/hand-rock-regular.svg" alt="" />
+            ROCK
+          </div>
+          <div class="choice flex" id="paper">
+            <img src="./images/hand-paper-regular.svg" alt="" />
+            PAPER
+          </div>
+          <div class="choice flex" id="scissors">
+            <img src="./images/hand-peace-regular.svg" alt="" />
+            SCISSORS
+          </div>
+        </div>
+
+        <div class="fixed-width">
+          <p id="computer-selection">Computer</p>
+        </div>
+      </div>
+
+      <div id="result-container">
+        <p id="result"></p>
+        <div class="score flex">
+          <p id="player-score">Player score</p>
+          <p id="computer-score">Computer score</p>
+          <p id="draw">Draw</p>
+        </div>
+
+        <p id="final-result"></p>
+      </div>
+    </section>
   </body>
 </html>
