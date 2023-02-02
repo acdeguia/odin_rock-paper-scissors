@@ -23,41 +23,52 @@
       </div>
     </header>
     <section class="container">
-      <p class="round" id="number-of-rounds">Round:</p>
+      <div class="round-draw flex">
+        <p class="round" id="number-of-rounds">Round:</p>
+        <p id="draw">Draw:</p>
+      </div>
 
-      <h3 class="heading flex">Choose</h3>
+      <h3 class="heading flex">Pick your choice</h3>
+      <p>Whoever reaches 5 points first wins the game</p>
 
       <div class="gap flex">
-        <div class="fixed-width">
-          <p id="player-selection"> Player</p>
+        <div class="box flex">
+          <p>Player choice</p>
+          <p id="player-selection"></p>
         </div>
 
         <div class="choices flex">
           <div class="choice flex" id="rock">
-            <img src="./images/hand-rock-regular.svg" alt="" />
+            <img src="./images/rock.png" alt="" />
             ROCK
           </div>
           <div class="choice flex" id="paper">
-            <img src="./images/hand-paper-regular.svg" alt="" />
+            <img src="./images/paper.png" alt="" />
             PAPER
           </div>
           <div class="choice flex" id="scissors">
-            <img src="./images/hand-peace-regular.svg" alt="" />
+            <img src="./images/scissors.png" alt="" />
             SCISSORS
           </div>
         </div>
 
-        <div class="fixed-width">
-          <p id="computer-selection">Computer</p>
+        <div class="box flex">
+          <p>Computer choice</p>
+          <p id="computer-selection"></p>
         </div>
       </div>
 
       <div id="result-container">
         <p id="result"></p>
         <div class="score flex">
-          <p id="player-score">Player score</p>
-          <p id="computer-score">Computer score</p>
-          <p id="draw">Draw</p>
+          <div class="box">
+            <p class="player-score">Player score:</p>
+            <p id="player-score"></p>
+          </div>
+          <div class="box">
+            <p class="computer-score">Computer Score:</p>
+            <p id="computer-score"></p>
+          </div>
         </div>
 
         <p id="final-result"></p>
