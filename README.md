@@ -1,3 +1,1 @@
-# odin_rock-paper-scissors
-
-
+https://acdeguia.github.io/rock-paper-scissors/
