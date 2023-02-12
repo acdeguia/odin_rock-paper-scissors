@@ -22,11 +22,11 @@ function playRound(playerSelection, computerSelection) {
             computerSelection = getComputerChoice().toUpperCase();
             document.getElementById("computer-selection").innerHTML = computerSelection;
             
-            document.getElementById("number-of-rounds").innerHTML = 'Round: ' + rounds;
+            // document.getElementById("number-of-rounds").innerHTML = 'Round: ' + rounds;
 
             if(playerSelection === computerSelection){
                 draw +=1;
-                document.getElementById("draw").innerHTML = 'Draw: ' + draw;
+                // document.getElementById("draw").innerHTML = 'Draw: ' + draw;
                 document.getElementById("result").innerHTML = 'Draw!';
             }else if (playerSelection === 'PAPER' && computerSelection === 'ROCK'){
                 playerScore += 1;
