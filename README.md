@@ -1,5 +1,3 @@
-https://acdeguia.github.io/rock-paper-scissors/
-
 # Rock Paper Scissors
 
 <br />
