@@ -1,5 +1,5 @@
 # Rock Paper Scissors
-⟱⟱⟱⟱⟱⟱
+LIVE DEMO
 <br />
 [LIVE PREVIEW](https://acdeguia.github.io/rock-paper-scissors/)
 
