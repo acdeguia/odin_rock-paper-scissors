@@ -1,4 +1,4 @@
-# TOP: Rock Paper Scissors project
+## TOP: Rock Paper Scissors project
 ⟱⟱⟱
 <br />
 [LIVE DEMO](https://acdeguia.github.io/rock-paper-scissors/)
